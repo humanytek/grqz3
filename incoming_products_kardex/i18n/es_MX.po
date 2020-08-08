@@ -1,0 +1,205 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* incoming_products_kardex
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-07 15:31+0000\n"
+"PO-Revision-Date: 2019-11-07 15:31+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: incoming_products_kardex
+#: model:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_report_document
+msgid "4-AR-22 v0"
+msgstr "4-AR-22 v0"
+
+#. module: incoming_products_kardex
+#: model:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_report_document
+msgid "<strong>CONFORM</strong>"
+msgstr "<strong>CONFORME</strong>"
+
+#. module: incoming_products_kardex
+#: model:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_report_document
+msgid "<strong>NO CONFORM</strong>"
+msgstr "<strong>NO CONFORME</strong>"
+
+#. module: incoming_products_kardex
+#: model:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_report_document
+msgid "CODE"
+msgstr "CODIGO"
+
+#. module: incoming_products_kardex
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_stock_kardex_line_product_conform
+msgid "Comform"
+msgstr "Conforme"
+
+#. module: incoming_products_kardex
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_incoming_products_kardex_create_uid
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_stock_kardex_line_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: incoming_products_kardex
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_incoming_products_kardex_create_date
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_stock_kardex_line_create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: incoming_products_kardex
+#: model:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_report_document
+msgid "DATE"
+msgstr "FECHA"
+
+#. module: incoming_products_kardex
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_incoming_products_kardex_date
+msgid "Date"
+msgstr "Fecha"
+
+#. module: incoming_products_kardex
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_incoming_products_kardex_display_name
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_stock_kardex_line_display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: incoming_products_kardex
+#: model:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_view_form
+msgid "Get"
+msgstr "Obtener información"
+
+#. module: incoming_products_kardex
+#: model:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_view_form
+msgid "Get data"
+msgstr "Datos"
+
+#. module: incoming_products_kardex
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_incoming_products_kardex_getted
+msgid "Getted"
+msgstr "Obtenido"
+
+#. module: incoming_products_kardex
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_incoming_products_kardex_id
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_stock_kardex_line_id
+msgid "ID"
+msgstr "ID"
+
+#. module: incoming_products_kardex
+#: model:ir.ui.menu,name:incoming_products_kardex.menu_incoming_products_kardex
+msgid "Incoming Products"
+msgstr "Productos Entrantes"
+
+#. module: incoming_products_kardex
+#: model:ir.actions.report,name:incoming_products_kardex.print_product_kardex_report_pdf
+msgid "Incoming Products Kardex"
+msgstr "Kardex Productos Entrantes"
+
+#. module: incoming_products_kardex
+#: model:ir.actions.act_window,name:incoming_products_kardex.incoming_products_kardex_action
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_stock_kardex_line_stock_kardex_id
+#: model:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_view_form
+msgid "Kardex"
+msgstr "Kardex"
+
+#. module: incoming_products_kardex
+#: model:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_report_document
+msgid "LOT/DOCUMENT"
+msgstr "LOTE/DOCUMENTO"
+
+#. module: incoming_products_kardex
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_incoming_products_kardex___last_update
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_stock_kardex_line___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: incoming_products_kardex
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_incoming_products_kardex_write_uid
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_stock_kardex_line_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: incoming_products_kardex
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_incoming_products_kardex_write_date
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_stock_kardex_line_write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: incoming_products_kardex
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_incoming_products_kardex_stock_kardex_line_ids
+msgid "Lines"
+msgstr "Líneas"
+
+#. module: incoming_products_kardex
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_incoming_products_kardex_lot
+msgid "Lot"
+msgstr "Lote"
+
+#. module: incoming_products_kardex
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_stock_kardex_line_ordered_qty
+msgid "Ordered qty"
+msgstr "Cantidad pedida"
+
+#. module: incoming_products_kardex
+#: model:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_report_document
+msgid "PRODUCT"
+msgstr "PRODUCTO"
+
+#. module: incoming_products_kardex
+#: model:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_view_form
+msgid "Print"
+msgstr "Imprimir"
+
+#. module: incoming_products_kardex
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_stock_kardex_line_product_name
+msgid "Product"
+msgstr "Producto"
+
+#. module: incoming_products_kardex
+#: model:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_report_document
+msgid "QUANTITY"
+msgstr "CANTIDAD"
+
+#. module: incoming_products_kardex
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_stock_kardex_line_qty_by_palette
+msgid "Qty by palette"
+msgstr "Entarimado"
+
+#. module: incoming_products_kardex
+#: model:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_report_document
+msgid "RECEIVED"
+msgstr "RECIBIDO"
+
+#. module: incoming_products_kardex
+#: model:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_report_document
+msgid "SUPPLIER"
+msgstr "PROVEEDOR"
+
+#. module: incoming_products_kardex
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_incoming_products_kardex_picking_id
+msgid "Stock Picking"
+msgstr "Albarán"
+
+#. module: incoming_products_kardex
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_incoming_products_kardex_supplier
+msgid "Supplier"
+msgstr "Proveedor"
+
+#. module: incoming_products_kardex
+#: model:ir.model,name:incoming_products_kardex.model_incoming_products_kardex
+msgid "incoming.products.kardex"
+msgstr "incoming.products.kardex"
+
+#. module: incoming_products_kardex
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_incoming_products_kardex_responsible
+msgid "responsible"
+msgstr "Responsable"
+
+#. module: incoming_products_kardex
+#: model:ir.model,name:incoming_products_kardex.model_stock_kardex_line
+msgid "stock.kardex.line"
+msgstr "stock.kardex.line"
