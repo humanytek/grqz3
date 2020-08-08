@@ -5,14 +5,13 @@
 
 {
     'name': "Sale Order Observation",
-    'summary': """
-    """,
     'author': "Humanytek",
     'website': "http://www.humanytek.com",
-    'license': 'AGPL-3',
     'category': 'Sale',
-    'version': '11.0.1.0.0',
-    'depends': ['mrp_sale_info'],
+    'version': '12.0.1.0.0',
+    'depends': [
+        'mrp_sale_info'
+    ],
     'data': [
         'views/sale_view.xml',
         'views/mrp_view.xml',
@@ -23,7 +22,4 @@
         'report/invoice_report_template.xml',
         'security/ir.model.access.csv',
     ],
-    'demo': [
-    ],
-    'installable': True,
 }

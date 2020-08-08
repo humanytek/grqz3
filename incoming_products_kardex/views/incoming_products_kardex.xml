@@ -43,6 +43,22 @@
     </field>
   </record>
 
+  <record model="ir.ui.view" id="stock_kardex_line_view_form">
+    <field name="name">stock_kardex_line_view_form</field>
+    <field name="model">stock.kardex.line</field>
+    <field name="arch" type="xml">
+      <form string="Kardex">
+        <group>
+          <field name="stock_kardex_id" invisible="True"/>
+          <field name="product_name"/>
+          <field name="ordered_qty"/>
+          <field name="qty_by_palette"/>
+          <field name="product_conform"/>
+        </group>
+      </form>
+    </field>
+  </record>
+
   <record id="incoming_products_kardex_action" model="ir.actions.act_window">
     <field name="name">Kardex</field>
     <field name="res_model">incoming.products.kardex</field>

@@ -16,6 +16,7 @@ _logger = logging.getLogger(__name__)
 
 class ProcessMeasurement(models.TransientModel):
     _name = 'process.measurement'
+    _description = 'Process Measurement'
 
     name = fields.Char('Name', compute='_compute_get_name')
     csv_file = fields.Binary(attachment=True,
@@ -57,7 +58,7 @@ class ProcessMeasurement(models.TransientModel):
                     obs,
                     order.product_qty,
                     order.partner_id.name.rstrip('\n'),
-                    order.date_planned_start.rstrip('\n'),
+                    order.date_planned_start,
                     order.sale_type_id.rstrip('\n'),
                     p1,
                     p2,

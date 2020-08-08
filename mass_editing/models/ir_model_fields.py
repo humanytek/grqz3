@@ -1,4 +1,4 @@
-# © 2016 Serpent Consulting Services Pvt. Ltd. (support@serpentcs.com)
+# Copyright 2016 Serpent Consulting Services Pvt. Ltd. (support@serpentcs.com)
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from odoo import api, models
@@ -15,7 +15,8 @@ class IrModelFields(models.Model):
                     isinstance(domain[2], str) and
                     list(domain[2][1:-1])):
                 model_domain += [('model_id', 'in',
-                                  list(map(int, domain[2][1:-1].split(','))))]
+                                  [int(x) for x in domain[2][1:-1].split(',')]
+                                  )]
             else:
                 model_domain.append(domain)
         return super(IrModelFields, self).search(model_domain, offset=offset,

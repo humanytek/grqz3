@@ -9,8 +9,8 @@
     'author': "gflores",
     'website': "https://www.gruporequiez.com",
     'category': 'Sales',
-    'version': '11.0.0.0.1',
-    'depends': ['sale'],
+    'version': '12.0.0.0.1',
+    'depends': ['sale_order_observation'],
     'data': [
         # views
         # reports

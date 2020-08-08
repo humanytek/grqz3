@@ -17,7 +17,7 @@ _logger = logging.getLogger(__name__)
 
 class UploadCarrierTracking(models.TransientModel):
     _name = 'upload.carrier.tracking'
-    _desciprion = 'Mass reference load of tracking guides'
+    _description = 'Mass reference load of tracking guides'
 
     name = fields.Char('File Name', default='status.csv')
     data_file = fields.Binary('File')
@@ -123,16 +123,12 @@ class UploadCarrierTracking(models.TransientModel):
                     StockPicking_id = self.env['stock.picking'].search(
                         [('origin', '=', row['OBSERVACION 1'])])
                     if StockPicking_id:
-                        email_to_send = ''
                         if len(StockPicking_id) == 1:
                             tracking_ref = 'EMBARCADO EL %s CON NO. GUIA %s' % (
                                 row['F.DOC'], row['TALON'])
-                            StockPicking_id.write({
-                                'carrier_tracking_ref': tracking_ref,
-                                'box': row['BULTOS']
-                            })
+                            StockPicking_id.write(
+                                {'carrier_tracking_ref': tracking_ref})
                             tracking_ref_status = 'OK'
-                            email_to_send = StockPicking_id.partner_id.email
                             send_tracking_ref(StockPicking_id.id)
                         else:
                             tracking_ref_status = 'Se encontraron multiples vales de entrega'
@@ -143,14 +139,13 @@ class UploadCarrierTracking(models.TransientModel):
                 data = (
                     row['TALON'],
                     row['OBSERVACION 1'],
-                    tracking_ref_status,
-                    email_to_send)
+                    tracking_ref_status)
                 data_list.append(data)
             handle, fn = tempfile.mkstemp(suffix='.csv')
             with os.fdopen(handle, "w", encoding='utf-8', errors='surrogateescape', newline='') as f:
                 writer = csv.writer(
                     f, delimiter=';', quoting=csv.QUOTE_MINIMAL)
-                writer.writerow(['GUIA', 'REFERENCIA', 'STATUS', 'EMAIL'])
+                writer.writerow(['GUIA', 'REFERENCIA', 'STATUS'])
                 try:
                     writer.writerows(data_list)
                 except Exception as e:

@@ -19,7 +19,7 @@
 
 {
     'name': 'value of merchandise sent',
-    'version': '11.0.0.0.1',
+    'version': '12.0.0.0.1',
     'summary': 'value of merchandise sent',
     'author': 'gflores',
     'maintainer': 'gflores',

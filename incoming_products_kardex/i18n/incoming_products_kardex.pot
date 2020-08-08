@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 11.0+e\n"
+"Project-Id-Version: Odoo Server 12.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-07 15:31+0000\n"
-"PO-Revision-Date: 2019-11-07 15:31+0000\n"
+"POT-Creation-Date: 2020-04-07 20:14+0000\n"
+"PO-Revision-Date: 2020-04-07 20:14+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,78 +16,78 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: incoming_products_kardex
-#: model:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_report_document
+#: model_terms:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_report_document
 msgid "4-AR-22 v0"
-msgstr "4-AR-22 v0"
+msgstr ""
 
 #. module: incoming_products_kardex
-#: model:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_report_document
+#: model_terms:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_report_document
 msgid "<strong>CONFORM</strong>"
 msgstr "<strong>CONFORME</strong>"
 
 #. module: incoming_products_kardex
-#: model:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_report_document
+#: model_terms:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_report_document
 msgid "<strong>NO CONFORM</strong>"
 msgstr "<strong>NO CONFORME</strong>"
 
 #. module: incoming_products_kardex
-#: model:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_report_document
+#: model_terms:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_report_document
 msgid "CODE"
-msgstr "CODIGO"
+msgstr "CÓDIGO"
 
 #. module: incoming_products_kardex
-#: model:ir.model.fields,field_description:incoming_products_kardex.field_stock_kardex_line_product_conform
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_stock_kardex_line__product_conform
 msgid "Comform"
 msgstr "Conforme"
 
 #. module: incoming_products_kardex
-#: model:ir.model.fields,field_description:incoming_products_kardex.field_incoming_products_kardex_create_uid
-#: model:ir.model.fields,field_description:incoming_products_kardex.field_stock_kardex_line_create_uid
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_incoming_products_kardex__create_uid
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_stock_kardex_line__create_uid
 msgid "Created by"
 msgstr "Creado por"
 
 #. module: incoming_products_kardex
-#: model:ir.model.fields,field_description:incoming_products_kardex.field_incoming_products_kardex_create_date
-#: model:ir.model.fields,field_description:incoming_products_kardex.field_stock_kardex_line_create_date
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_incoming_products_kardex__create_date
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_stock_kardex_line__create_date
 msgid "Created on"
 msgstr "Creado el"
 
 #. module: incoming_products_kardex
-#: model:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_report_document
+#: model_terms:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_report_document
 msgid "DATE"
 msgstr "FECHA"
 
 #. module: incoming_products_kardex
-#: model:ir.model.fields,field_description:incoming_products_kardex.field_incoming_products_kardex_date
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_incoming_products_kardex__date
 msgid "Date"
 msgstr "Fecha"
 
 #. module: incoming_products_kardex
-#: model:ir.model.fields,field_description:incoming_products_kardex.field_incoming_products_kardex_display_name
-#: model:ir.model.fields,field_description:incoming_products_kardex.field_stock_kardex_line_display_name
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_incoming_products_kardex__display_name
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_stock_kardex_line__display_name
 msgid "Display Name"
-msgstr "Nombre a mostrar"
+msgstr "Nombre mostrado"
 
 #. module: incoming_products_kardex
-#: model:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_view_form
+#: model_terms:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_view_form
 msgid "Get"
-msgstr "Obtener información"
+msgstr "Calcular"
 
 #. module: incoming_products_kardex
-#: model:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_view_form
+#: model_terms:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_view_form
 msgid "Get data"
-msgstr "Datos"
+msgstr "Obtener datos"
 
 #. module: incoming_products_kardex
-#: model:ir.model.fields,field_description:incoming_products_kardex.field_incoming_products_kardex_getted
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_incoming_products_kardex__getted
 msgid "Getted"
-msgstr "Obtenido"
+msgstr "GENERADO"
 
 #. module: incoming_products_kardex
-#: model:ir.model.fields,field_description:incoming_products_kardex.field_incoming_products_kardex_id
-#: model:ir.model.fields,field_description:incoming_products_kardex.field_stock_kardex_line_id
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_incoming_products_kardex__id
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_stock_kardex_line__id
 msgid "ID"
-msgstr "ID"
+msgstr ""
 
 #. module: incoming_products_kardex
 #: model:ir.ui.menu,name:incoming_products_kardex.menu_incoming_products_kardex
@@ -101,105 +101,106 @@ msgstr "Kardex Productos Entrantes"
 
 #. module: incoming_products_kardex
 #: model:ir.actions.act_window,name:incoming_products_kardex.incoming_products_kardex_action
-#: model:ir.model.fields,field_description:incoming_products_kardex.field_stock_kardex_line_stock_kardex_id
-#: model:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_view_form
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_stock_kardex_line__stock_kardex_id
+#: model_terms:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_view_form
+#: model_terms:ir.ui.view,arch_db:incoming_products_kardex.stock_kardex_line_view_form
 msgid "Kardex"
-msgstr "Kardex"
+msgstr ""
 
 #. module: incoming_products_kardex
-#: model:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_report_document
+#: model_terms:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_report_document
 msgid "LOT/DOCUMENT"
 msgstr "LOTE/DOCUMENTO"
 
 #. module: incoming_products_kardex
-#: model:ir.model.fields,field_description:incoming_products_kardex.field_incoming_products_kardex___last_update
-#: model:ir.model.fields,field_description:incoming_products_kardex.field_stock_kardex_line___last_update
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_incoming_products_kardex____last_update
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_stock_kardex_line____last_update
 msgid "Last Modified on"
 msgstr "Última modificación en"
 
 #. module: incoming_products_kardex
-#: model:ir.model.fields,field_description:incoming_products_kardex.field_incoming_products_kardex_write_uid
-#: model:ir.model.fields,field_description:incoming_products_kardex.field_stock_kardex_line_write_uid
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_incoming_products_kardex__write_uid
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_stock_kardex_line__write_uid
 msgid "Last Updated by"
 msgstr "Última actualización por"
 
 #. module: incoming_products_kardex
-#: model:ir.model.fields,field_description:incoming_products_kardex.field_incoming_products_kardex_write_date
-#: model:ir.model.fields,field_description:incoming_products_kardex.field_stock_kardex_line_write_date
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_incoming_products_kardex__write_date
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_stock_kardex_line__write_date
 msgid "Last Updated on"
 msgstr "Última actualización el"
 
 #. module: incoming_products_kardex
-#: model:ir.model.fields,field_description:incoming_products_kardex.field_incoming_products_kardex_stock_kardex_line_ids
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_incoming_products_kardex__stock_kardex_line_ids
 msgid "Lines"
 msgstr "Líneas"
 
 #. module: incoming_products_kardex
-#: model:ir.model.fields,field_description:incoming_products_kardex.field_incoming_products_kardex_lot
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_incoming_products_kardex__lot
 msgid "Lot"
 msgstr "Lote"
 
 #. module: incoming_products_kardex
-#: model:ir.model.fields,field_description:incoming_products_kardex.field_stock_kardex_line_ordered_qty
+#: model:ir.model,name:incoming_products_kardex.model_incoming_products_kardex
+msgid "Modulo para crear Kardex de ingreso de material al almacen"
+msgstr ""
+
+#. module: incoming_products_kardex
+#: model:ir.model,name:incoming_products_kardex.model_stock_kardex_line
+msgid "Modulo para crear Kardex de ingreso de material al almacen (lineas)"
+msgstr ""
+
+#. module: incoming_products_kardex
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_stock_kardex_line__ordered_qty
 msgid "Ordered qty"
 msgstr "Cantidad pedida"
 
 #. module: incoming_products_kardex
-#: model:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_report_document
+#: model_terms:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_report_document
 msgid "PRODUCT"
 msgstr "PRODUCTO"
 
 #. module: incoming_products_kardex
-#: model:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_view_form
+#: model_terms:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_view_form
 msgid "Print"
 msgstr "Imprimir"
 
 #. module: incoming_products_kardex
-#: model:ir.model.fields,field_description:incoming_products_kardex.field_stock_kardex_line_product_name
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_stock_kardex_line__product_name
 msgid "Product"
 msgstr "Producto"
 
 #. module: incoming_products_kardex
-#: model:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_report_document
+#: model_terms:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_report_document
 msgid "QUANTITY"
 msgstr "CANTIDAD"
 
 #. module: incoming_products_kardex
-#: model:ir.model.fields,field_description:incoming_products_kardex.field_stock_kardex_line_qty_by_palette
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_stock_kardex_line__qty_by_palette
 msgid "Qty by palette"
 msgstr "Entarimado"
 
 #. module: incoming_products_kardex
-#: model:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_report_document
+#: model_terms:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_report_document
 msgid "RECEIVED"
 msgstr "RECIBIDO"
 
 #. module: incoming_products_kardex
-#: model:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_report_document
+#: model_terms:ir.ui.view,arch_db:incoming_products_kardex.incoming_products_kardex_report_document
 msgid "SUPPLIER"
 msgstr "PROVEEDOR"
 
 #. module: incoming_products_kardex
-#: model:ir.model.fields,field_description:incoming_products_kardex.field_incoming_products_kardex_picking_id
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_incoming_products_kardex__picking_id
 msgid "Stock Picking"
 msgstr "Albarán"
 
 #. module: incoming_products_kardex
-#: model:ir.model.fields,field_description:incoming_products_kardex.field_incoming_products_kardex_supplier
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_incoming_products_kardex__supplier
 msgid "Supplier"
 msgstr "Proveedor"
 
 #. module: incoming_products_kardex
-#: model:ir.model,name:incoming_products_kardex.model_incoming_products_kardex
-msgid "incoming.products.kardex"
-msgstr "incoming.products.kardex"
-
-#. module: incoming_products_kardex
-#: model:ir.model.fields,field_description:incoming_products_kardex.field_incoming_products_kardex_responsible
+#: model:ir.model.fields,field_description:incoming_products_kardex.field_incoming_products_kardex__responsible
 msgid "responsible"
 msgstr "Responsable"
-
-#. module: incoming_products_kardex
-#: model:ir.model,name:incoming_products_kardex.model_stock_kardex_line
-msgid "stock.kardex.line"
-msgstr "stock.kardex.line"

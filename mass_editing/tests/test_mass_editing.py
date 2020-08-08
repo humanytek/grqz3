@@ -1,4 +1,5 @@
-# © 2016 Serpent Consulting Services Pvt. Ltd. (support@serpentcs.com)
+# Copyright 2016 Serpent Consulting Services Pvt. Ltd. (support@serpentcs.com)
+# Copyright 2018 Aitor Bouzas <aitor.bouzas@adaptivecity.com)
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 import ast
@@ -8,62 +9,65 @@ from odoo.modules import registry
 from ..hooks import uninstall_hook
 
 
-class TestMassEditing(common.TransactionCase):
+class TestMassEditing(common.SavepointCase):
     at_install = False
     post_install = True
 
-    def setUp(self):
-        super(TestMassEditing, self).setUp()
+    @classmethod
+    def setUpClass(cls):
+        super(TestMassEditing, cls).setUpClass()
         # Model connections
-        model_obj = self.env['ir.model']
-        self.mass_wiz_obj = self.env['mass.editing.wizard']
-        self.mass_object_model = self.env['mass.object']
-        self.res_partner_model = self.env['res.partner']
-        self.ir_translation_model = self.env['ir.translation']
-        self.lang_model = self.env['res.lang']
+        cls.env = cls.env(context=dict(cls.env.context, tracking_disable=True))
+        model_obj = cls.env['ir.model']
+        cls.mass_wiz_obj = cls.env['mass.editing.wizard']
+        cls.mass_object_model = cls.env['mass.object']
+        cls.res_partner_model = cls.env['res.partner']
+        cls.ir_translation_model = cls.env['ir.translation']
+        cls.lang_model = cls.env['res.lang']
         # Shared data for test methods
-        self.partner = self._create_partner()
-        self.partner_model = model_obj.\
+        cls.partner = cls._create_partner()
+        cls.partner_model = model_obj.\
             search([('model', '=', 'res.partner')])
-        self.user_model = model_obj.search([('model', '=', 'res.users')])
-        self.fields_model = self.env['ir.model.fields'].\
-            search([('model_id', '=', self.partner_model.id),
+        cls.user_model = model_obj.search([('model', '=', 'res.users')])
+        cls.fields_model = cls.env['ir.model.fields'].\
+            search([('model_id', '=', cls.partner_model.id),
                     ('name', 'in', ['email', 'phone', 'category_id', 'comment',
                                     'country_id', 'customer', 'child_ids',
-                                    'title'])])
-        self.mass = self._create_mass_editing(self.partner_model,
-                                              self.fields_model,
-                                              'Partner')
-        self.copy_mass = self.mass.copy()
-        self.user = self._create_user()
-        self.res_partner_title_model = self.env['res.partner.title']
-        self.partner_title = self._create_partner_title()
-        self.partner_title_model = model_obj.search(
+                                    'title', 'company_type'])])
+        cls.mass = cls._create_mass_editing(
+            cls.partner_model, cls.fields_model, 'Partner')
+        cls.copy_mass = cls.mass.copy()
+        cls.user = cls._create_user()
+        cls.res_partner_title_model = cls.env['res.partner.title']
+        cls.partner_title = cls._create_partner_title()
+        cls.partner_title_model = model_obj.search(
             [('model', '=', 'res.partner.title')])
-        self.fields_partner_title_model = self.env['ir.model.fields'].search(
-            [('model_id', '=', self.partner_title_model.id),
+        cls.fields_partner_title_model = cls.env['ir.model.fields'].search(
+            [('model_id', '=', cls.partner_title_model.id),
              ('name', 'in', ['abbreviation'])])
-        self.mass_partner_title = self._create_mass_editing(
-            self.partner_title_model,
-            self.fields_partner_title_model,
+        cls.mass_partner_title = cls._create_mass_editing(
+            cls.partner_title_model, cls.fields_partner_title_model,
             'Partner Title')
 
-    def _create_partner(self):
+    @classmethod
+    def _create_partner(cls):
         """Create a Partner."""
-        categ_ids = self.env['res.partner.category'].search([]).ids
-        return self.res_partner_model.create({
+        categ_ids = cls.env['res.partner.category'].search([]).ids
+        return cls.res_partner_model.create({
             'name': 'Test Partner',
             'email': 'example@yourcompany.com',
             'phone': 123456,
             'category_id': [(6, 0, categ_ids)],
+            'notify_email': 'always'
         })
 
-    def _create_partner_title(self):
+    @classmethod
+    def _create_partner_title(cls):
         """Create a Partner Title."""
         # Loads German to work with translations
-        self.lang_model.load_lang('de_DE')
+        cls.lang_model.load_lang('de_DE')
         # Creating the title in English
-        partner_title = self.res_partner_title_model.create({
+        partner_title = cls.res_partner_title_model.create({
             'name': 'Ambassador',
             'shortcut': 'Amb.',
         })
@@ -74,17 +78,19 @@ class TestMassEditing(common.TransactionCase):
             'shortcut': 'Bots.'})
         return partner_title
 
-    def _create_user(self):
-        return self.env['res.users'].create({
+    @classmethod
+    def _create_user(cls):
+        return cls.env['res.users'].create({
             'name': 'Test User',
             'login': 'test_login',
             'email': 'test@test.com',
         })
 
-    def _create_mass_editing(self, model, fields, model_name):
+    @classmethod
+    def _create_mass_editing(cls, model, fields, model_name):
         """Create a Mass Editing with Partner as model and
         email field of partner."""
-        mass = self.mass_object_model.create({
+        mass = cls.mass_object_model.create({
             'name': 'Mass Editing for {0}'.format(model_name),
             'model_id': model.id,
             'field_ids': [(6, 0, fields.ids)]
@@ -199,8 +205,8 @@ class TestMassEditing(common.TransactionCase):
         self.assertNotEqual(self.partner.category_id, False,
                             'Partner\'s category should be removed.')
         # Add m2m categories
-        dist_categ_id = self.env.ref('base.res_partner_category_13').id
-        vend_categ_id = self.env.ref('base.res_partner_category_1').id
+        dist_categ_id = self.env.ref('base.res_partner_category_14').id
+        vend_categ_id = self.env.ref('base.res_partner_category_0').id
         vals = {
             'selection__category_id': 'add',
             'category_id': [[6, 0, [dist_categ_id, vend_categ_id]]],
@@ -238,6 +244,16 @@ class TestMassEditing(common.TransactionCase):
         self.mass.unlink_action()
         action = self.mass.ref_ir_act_window_id
         self.assertFalse(action, 'Sidebar action must be removed.')
+
+    def test_special_search(self):
+        """Test for the special search."""
+        fields = self.env['ir.model.fields'].search(
+            [('ttype', 'not in', ['reference', 'function']),
+             ('mass_editing_domain', 'in', '[1,2]')]
+        )
+        self.assertTrue(len(fields),
+                        "Special domain 'mass_editing_domain'"
+                        " should find fields in different models.")
 
     def test_unlink_mass(self):
         """Test if related actions are removed when mass editing
