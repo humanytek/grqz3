@@ -6,3 +6,7 @@
 	path = vendor-bills
 	url = git@git.vauxoo.com:vauxoo/vendor-bills.git
 	branch = 11.0
+[submodule "delivery_slip_rqz"]
+	path = delivery_slip_rqz
+	url = git@github.com:GustavoRequiez/delivery_slip_rqz.git
+	branch = 11.0
