@@ -6,3 +6,7 @@
 	path = vendor-bills
 	url = git@git.vauxoo.com:vauxoo/vendor-bills.git
 	branch = 11.0
+[submodule "requiez"]
+	path = requiez
+	url = git@github.com:GrupoRequiez/requiez.git
+	branch = 11.0
