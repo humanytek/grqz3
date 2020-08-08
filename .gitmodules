@@ -10,3 +10,8 @@
 	path = requiez
 	url = git@github.com:GrupoRequiez/requiez.git
 	branch = 11.0
+
+[submodule "onebeat_integration"]
+	path = onebeat_integration
+	url = git@github.com:humanytek-team/onebeat_integration.git
+	branch = 12.0
